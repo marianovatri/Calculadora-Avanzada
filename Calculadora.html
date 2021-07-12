@@ -7,21 +7,37 @@
        <title>Document</title>
 </head>
 <body>
-       <form name="multiplicacion" >
-       <label for="">Calculadora Avanzada</label> <br>
+       <form name="calculadora"  oninput="resultadoSuma.value = parseInt(numero1.value) + parseInt(numero2.value); 
+       resultadoResta.value = parseInt(numero1.value) - parseInt(numero2.value);
+       resultadoMult.value = parseInt(numero1.value) * parseInt(numero2.value);
+       resultadoDiv.value = parseInt(numero1.value) / parseInt(numero2.value);  
+       ">
+       
+       <label for="">Calculadora Avanzada</label> 
+
+       
        <input id="numero1" type="number" step="any">
-       <button>Clear</button>
+       <button >Clear</button>
+       
+
+       
        <input id="numero2" type="number" step="any">
        <button>Clear</button> 
-       <output name="resultado">
-       </form>
+      
+     
+       
 
        <h2>Calculadora en base a los 2 inputs: </h2>
-       <p>La suma es = </p>
-       <p>La resta es = </p>
-       <p>La multiplicacion es = </p>
-       <p>La division es = </p>
-       <p>La suma es = </p>
+       <p>la suma es = <output name="resultadoSuma"></p>
+       <p>La resta es = <output name="resultadoResta"></output> </p>
+       <p>La multiplicacion es = <output name="resultadoMult"></output> </p>
+       <p>La division es = <output name="resultadoDiv"></output> </p>
+       <p>La potencia es = </output> </p>
+       <p>La raiz cuadrada es = </output> </p>
+       <p>La hipotenusa es = </output> </p>
+       
+
+</form>
 
 </body>
 </html>      
