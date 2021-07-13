@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import {Suma,Resta, Multiplicacion,Division} from './Calculos';
+
 
 function App() {
  
@@ -12,6 +14,8 @@ function App() {
   const handleInput = (valor) => {
     setDatos({...datos, [valor.target.name] : valor.target.value })
   }
+
+  
   
   return (
     
@@ -36,10 +40,10 @@ function App() {
           </div>
 
           <h2>Calculadora en base a los 2 inputs: </h2>
-           <p>la suma es = {parseFloat(datos.num1)+parseFloat(datos.num2)}  </p>
-           <p>La resta es = {parseFloat(datos.num1)-parseFloat(datos.num2)}   </p>
-           <p>La multiplicacion es = {parseFloat(datos.num1)*parseFloat(datos.num2)}   </p>
-           <p>La division es =  {parseFloat(datos.num1)/parseFloat(datos.num2)}  </p>
+           <p>la suma es = {Suma}  </p>
+           <p>La resta es = {Resta}   </p>
+           <p>La multiplicacion es = {Multiplicacion}   </p>
+           <p>La division es =  {Division}  </p>
            <p>La potencia es =  </p>
            <p>La raiz cuadrada es =  </p>
            <p>La hipotenusa es =  </p>
@@ -47,11 +51,14 @@ function App() {
 
         </form>
 
+
     
     </div>
     
     
   );
+  
+
   
   }
   
