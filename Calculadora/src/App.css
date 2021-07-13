@@ -1,8 +1,12 @@
 .App {
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
-
+.Calculo {
+  margin-left: 10px;
+}
 
 .App-header {
   background-color: #282c34;
@@ -15,5 +19,9 @@
   color: white;
 }
 
+.contenedor {
+  display: flex;
+
+}
 
 
