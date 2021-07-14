@@ -1,26 +1,27 @@
 .App {
-  text-align: left;
-  padding-left: 50px;
+  text-align: center;
+  background-color: #771a1a;
   padding-top: 20px;
 }
 
-.Calculo {
-  margin-left: 10px;
+
+label, h2 {
+  background-color: #942424;
+  border: 1px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.Calculo {
+  margin: 10px;
+   
 }
+
+
 
 .contenedor {
   display: flex;
+  justify-content: center;  
+ background-color: #771a1a;
 
 }
 
