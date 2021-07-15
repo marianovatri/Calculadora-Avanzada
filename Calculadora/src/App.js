@@ -1,5 +1,6 @@
 import React, {useEffect,useState } from 'react';
 import './App.css';
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 
 
@@ -84,16 +85,76 @@ function App() {
           </div>
           </form>
       </div>
-         
-          <h2>Calculadora en base a los 2 inputs: </h2>
-           <p>la suma es = {suma}  </p>
-           <p>La resta es = {resta}    </p>
-           <p>La multiplicacion es = {mult}    </p>
-           <p>La division es =  {div}   </p>
-           <p>La potencia es = {pot}   </p>
-           <p>La raiz cuadrada es =  {cuad}  </p>
-           <p>La hipotenusa es = {hyp}  </p>
+      
 
+          <h2>Calculadora en base a los 2 inputs: </h2>
+          <DragDropContext>
+
+          <Droppable droppableId="columna1">
+           { (provided) => (
+           <div className="columna1"
+            {...provided.droppableProps}
+             ref={provided.innerRef}>
+               
+          <Draggable key="1" draggableId="1" index="1">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>la suma es = {suma}  </p>)}
+           </Draggable>
+
+           <Draggable key="2" draggableId="2" index="2">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La resta es = {resta}  </p>)}
+           </Draggable>
+
+           <Draggable key="3" draggableId="3" index="3">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La multiplicacion es = {mult}  </p>)}
+           </Draggable>
+
+           <Draggable key="4" draggableId="4" index="4">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La division es =  {div}  </p>)}
+           </Draggable>
+           
+           <Draggable key="5" draggableId="5" index="5">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La potencia es = {pot}  </p>)}
+           </Draggable>
+
+           <Draggable key="6" draggableId="6" index="6">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La raiz cuadrada es =  {cuad}  </p>)}
+           </Draggable>
+
+           <Draggable key="7" draggableId="7" index="7">
+           {(provided) => (
+           <p  {...provided.draggableProps} 
+           ref={provided.innerRef}
+           {...provided.dragHandleProps}>La hipotenusa es = {hyp}  </p>)}
+           </Draggable>
+
+
+           {provided.placeholder}
+           
+           </div>)}
+                       
+           </Droppable>
+
+           
+           
+      </DragDropContext>
        
 
     

@@ -16,7 +16,9 @@ label, h2 {
    
 }
 
-
+p {
+  border: 1px solid black;
+}
 
 .contenedor {
   display: flex;
@@ -25,4 +27,7 @@ label, h2 {
 
 }
 
+.cajagrande {
+  display: flex;
+}
 
